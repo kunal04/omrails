@@ -1,8 +1,8 @@
 <div class="hero-unit">
 <h1>Welcome to One Month Rails!</h1>
 <p>
-	This is the home page for my sample app for One Month Rails.
+	This is the home page for my sample app for. <%= link_to "One Month Rails", "http://onemonthrails.com" %>
 	<br>
-	<a href="http://onemonthrails.com" class="btn btn-primary btn-large">Sign Up Now!</a>
+	<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 </p>
 </div>

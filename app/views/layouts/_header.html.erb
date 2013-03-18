@@ -19,8 +19,13 @@
 			<li><%= link_to "About", about_path %></li>
       	</ul>
 				<div class="thelogin pull-right">
-					<%= link_to "Login", '#', class: "btn  btn-mini btn-primary" %>
-					<%= link_to "Register", '#', class: "btn  btn-mini btn-success" %>
+          <% if user_signed_in? %>
+          Signed in as... <%= current_user.email %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn  btn-mini btn-primary" %>
+					<% else %>
+          <%= link_to "Login", new_user_session_path, class: "btn  btn-mini btn-primary" %>
+					<%= link_to "Register", new_user_registration_path, class: "btn  btn-mini btn-success" %>
+          <% end %>
 				</div>
       </div>
  
