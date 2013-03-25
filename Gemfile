@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 3.0"
+gem 'aws-sdk'
 
 group :development, :test do
 	gem 'sqlite3'
