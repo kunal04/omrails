@@ -20,6 +20,7 @@
 				<div class="thelogin pull-right">
           <% if user_signed_in? %>
           Hi <%= current_user.firstname %>
+          <%= link_to "Add +", new_pin_path %>
           <%= link_to "Edit Profile", edit_user_registration_path, class: "btn  btn-mini btn-primary" %>
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn  btn-mini btn-primary" %>
 					<% else %>
