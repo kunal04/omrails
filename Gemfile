@@ -1,15 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
-
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
+gem 'will_paginate', '~> 3.0.0'
+
 
 group :development, :test do
 	gem 'sqlite3'
+	gem 'faker'
 end
 
 # Gems used only for assets and not required

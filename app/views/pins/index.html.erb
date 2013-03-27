@@ -1,8 +1,10 @@
 <%= render 'pages/home' %>
 
+
 <div id="pins">
   <%= render @pins %>
 </div>
 <br />
-
+<%= will_paginate @pins %>
+<br />
 <%= link_to 'New Pin', new_pin_path %>
