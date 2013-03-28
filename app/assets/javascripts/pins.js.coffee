@@ -4,8 +4,6 @@
 jQuery ->
 	$('#pins').imagesLoaded ->
 	  $('#pins').masonry itemSelector: ".box"
-
-jQuery ->
   if $('.pagination').length
     $(window).scroll ->
       url = $('.pagination .next_page').attr('href')
@@ -13,3 +11,4 @@ jQuery ->
         $('.pagination').text("Fetching more products...")
         $.getScript(url)
     $(window).scroll()
+

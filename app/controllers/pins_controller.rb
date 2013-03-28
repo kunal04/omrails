@@ -3,11 +3,12 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.order("created_at desc").paginate(:page => params[:page])
+    @pins = Pin.order("created_at desc").page(params[:page]).per_page(20)
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @pins }
+      format.js
     end
   end
 
