@@ -35,6 +35,9 @@ Omrails::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  #Fix local SSL issue
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
 # In production, :host should be set to the actual host of your application.
    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

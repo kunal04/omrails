@@ -7,6 +7,7 @@ gem 'simple_form'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
 gem 'will_paginate', '~> 3.0.0'
+gem 'omniauth-facebook'
 
 
 group :development, :test do
