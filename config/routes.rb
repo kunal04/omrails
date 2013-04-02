@@ -20,7 +20,9 @@ Omrails::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+    resources :pins do
+      member { post :vote }
+    end
   # Sample resource route with options:
   #   resources :products do
   #     member do

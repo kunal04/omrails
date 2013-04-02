@@ -8,7 +8,7 @@ gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
 gem 'will_paginate', '~> 3.0.0'
 gem 'omniauth-facebook'
-
+gem 'activerecord-reputation-system'
 
 group :development, :test do
 	gem 'sqlite3'

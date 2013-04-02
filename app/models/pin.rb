@@ -12,7 +12,9 @@ class Pin < ActiveRecord::Base
 
   belongs_to :user
   has_attached_file :image, styles: { medium: "320x240>"}
+  has_reputation :votes, source: :user, aggregated_by: :sum
 
+  #has_reputaion :votes, source: :user, aggregated_by: :sum
   # remote image uploading
 
   attr_accessor :image_url
