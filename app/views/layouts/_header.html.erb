@@ -19,6 +19,7 @@
       	</ul>
 				<div class="thelogin pull-right">
           <% if user_signed_in? %>
+          <%= image_tag current_user.image %>
           Hi <%= current_user.firstname %>
           <%= link_to "Add +", new_pin_path %>
           <%= link_to "Edit Profile", edit_user_registration_path, class: "btn  btn-mini btn-primary" %>
