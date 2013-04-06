@@ -3,6 +3,9 @@
 
 <div class="row">
   <div class="span4">
+  	<%= image_tag "http://graph.facebook.com/#{@user.uid}/picture?type=large" %>
+  	<%= image_tag "http://graph.facebook.com/#{@user.uid}/picture?type=small" %>
+  	<%= image_tag "http://graph.facebook.com/#{@user.uid}/picture?type=normal" %>
   	<%= image_tag @user.image %>
   </div>
 

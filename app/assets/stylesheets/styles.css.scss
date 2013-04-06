@@ -29,7 +29,8 @@ $navbarBrandColor: $navbarLinkColor;
 .navsec {
 	border: 1px solid black;
 	background-color: black;
-	Margin-top: 60px;
+	margin-top: 60px;
+	margin-bottom: 20px;
 }
 
 body {
@@ -54,6 +55,10 @@ body {
 	margin-bottom: 10px;
 	color: gray;
 	text-align: center;
+}
+
+#pins {
+	margin-top: 20px;
 }
 
 /* Required for JQuery Masonry */

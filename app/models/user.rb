@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :firstname, :lastname, :image
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :firstname, :lastname,  :authentication_token,:image
   # attr_accessible :title, :body
 
   has_many :pins, dependent: :destroy
@@ -18,7 +18,8 @@ def self.from_omniauth(auth)
     user.lastname = auth.info.last_name
     user.provider = auth.provider
     user.uid = auth.uid
-    user.image = access_token.info.image
+    user.authentication_token = auth.credentials.access_token
+    user.image = auth.info.image
   end
 end
 

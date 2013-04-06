@@ -19,7 +19,7 @@
       	</ul>
 				<div class="thelogin pull-right">
           <% if user_signed_in? %>
-          <%= image_tag current_user.image %>
+          <%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?type=small" %>
           Hi <%= current_user.firstname %>
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn  btn-mini btn-primary" %>
 					<% else %>
