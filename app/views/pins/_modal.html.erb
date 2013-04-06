@@ -4,13 +4,16 @@
     <h3 id="myModalLabel">Posted by <%= pin.user.firstname %></h3>
   </div>
   <div class="modal-body">
-    <%= image_tag pin.image %>
+    <%= link_to image_tag(pin.image), pin %>
     <p><%= pin.description %></p> 
   </div>
   <div class="modal-footer">
     <div class="pull-left">
+
     <%= pluralize pin.reputation_for(:votes).to_i, "Likes" %> |
-    <%= link_to "Like", vote_pin_path(pin, type: "up"), method: "post" %>
+      <%= link_to "Like", vote_pin_path(pin, type: "up"), method: "post" %> |
+      <%= link_to "Unlike", vote_pin_path(pin, type: "down"), method: "post" %> |
+    
   </div>
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
