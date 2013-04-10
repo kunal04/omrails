@@ -11,6 +11,7 @@ class Pin < ActiveRecord::Base
 												size: { less_than: 5.megabytes }
 
   belongs_to :user
+  acts_as_commentable
   has_attached_file :image, styles: { medium: "320x240>"}
   has_reputation :votes, source: :user, aggregated_by: :sum
 

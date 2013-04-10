@@ -1,29 +1,22 @@
-$navbarBackground: red;
+$avbarBackground: black;
 $navbarBackgroundHighlight: black;
 $navbarText: white;
 $navbarLinkColor: white;
 $navbarBrandColor: $navbarLinkColor; 
+$navbarHeight: 60px;
 
 @import 'bootstrap';
 
 
-
 .navbar-inner {
-	min-height: 60px;
 	color: white;
-	background: #cc0000; /* Old browsers */
-	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjYzAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-linear-gradient(top,  #cc0000 0%, #cc0000 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc0000), color-stop(100%,#cc0000)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #cc0000 0%,#cc0000 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #cc0000 0%,#cc0000 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #cc0000 0%,#cc0000 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #cc0000 0%,#cc0000 100%); /* W3C */
+
  	border-top: 0px;
  	border-left: 0px;
  	border-right: 0px;
  	border-radius: 0px;
+ 	margin-top: auto;
+	margin-bottom: auto;
 	}
 
 .navsec {
@@ -35,14 +28,11 @@ $navbarBrandColor: $navbarLinkColor;
 
 body {
 	padding-top: 90px;
+	background-image: url(grey_wash_wall.png);
 }
 
-.thelogin {
-	padding-top: 5px;
-}
-
-.brand {
-	color: white;
+.brands {
+	color: red;
 }
 .hero-unit {
 
@@ -61,6 +51,12 @@ body {
 	margin-top: 20px;
 }
 
+.navpic img {
+	height: 30px;
+	border-radius:  1px;
+	margin-top: 15px;
+	margin-bottom: auto;
+}
 /* Required for JQuery Masonry */
 
 .box {
