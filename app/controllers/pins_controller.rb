@@ -83,7 +83,7 @@ class PinsController < ApplicationController
   end
 
     def vote
-    value = params[:type] == "up" ? 1 : -1
+    value = params[:type] == "up" ? 1 : 0
     @pin = Pin.find(params[:id])
     @pin.add_or_update_evaluation(:votes, value, current_user)
     redirect_to :back, notice: "Thank you for voting"
