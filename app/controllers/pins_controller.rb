@@ -82,7 +82,8 @@ class PinsController < ApplicationController
     end
   end
 
-    def vote
+  #voting system
+  def vote
     value = params[:type] == "up" ? 1 : 0
     @pin = Pin.find(params[:id])
     @pin.add_or_update_evaluation(:votes, value, current_user)

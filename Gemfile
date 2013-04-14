@@ -9,6 +9,7 @@ gem 'aws-sdk'
 gem 'will_paginate', '~> 3.0.0'
 gem 'omniauth-facebook'
 gem 'activerecord-reputation-system'
+gem 'country_select'
 
 group :development, :test do
 	gem 'sqlite3'

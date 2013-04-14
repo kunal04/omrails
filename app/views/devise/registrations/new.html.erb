@@ -6,6 +6,8 @@
 	<%= f.input :firstname, label: "First Name" %>
 	<%= f.input :lastname, label: "Last Name" %>
   <%= f.input :email %>
+  <%= f.input :city %>
+  <%= f.country_select :country %>
   <% if f.object.password_required? %>
   	<%= f.input :password %>
   	<%= f.input :password_confirmation %>
