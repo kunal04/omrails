@@ -9,6 +9,8 @@
 <body>
 	<div id="wrap">
 		<%= render 'layouts/header' %>
+
+		
 			<div id="main" class="container">
 				<% flash.each do |name, msg| %>
 					<%= content_tag(:div, msg, class: "alert alert-#{name}") %>

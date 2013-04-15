@@ -21,7 +21,7 @@
 
 <% if user_signed_in? %>
           <ul class="nav pull-right">
-          <li class="navpic pull-bottom"><%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?type=small" %></li>
+          <li class="navpic"><%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?type=small" %></li>
           <li class="divider-vertical"></li>
           <li class="dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= current_user.firstname %> <%= current_user.lastname %> <strong class="caret"></strong></a>
