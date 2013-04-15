@@ -6,16 +6,19 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :firstname, :lastname, :city, :country, :authentication_token,:image
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :firstname, :lastname, :city, :country, 
+                  :authentication_token, :image, :gender
   # attr_accessible :title, :body
 
   has_many :pins, dependent: :destroy
+  has_many :comments, :dependent => :destroy
   has_many :evaluations, class_name: "RSEvaluation", as: :source
 
 def self.from_omniauth(auth)
   where(auth.slice(:provider, :uid)).first_or_create do |user|
     user.firstname = auth.info.first_name
     user.lastname = auth.info.last_name
+    user.gender = auth.info.gender
     user.provider = auth.provider
     user.uid = auth.uid
     user.authentication_token = auth.credentials.access_token

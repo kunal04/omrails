@@ -4,7 +4,10 @@
 		<%= pin.description %>
 	</p>
 	<p>
-		Posted by <%= link_to pin.user.firstname, pin.user %>
+		Posted by <%= link_to (pin.user.firstname + " " + pin.user.lastname), pin.user %>
+	</p>
+	<p>
+		<p><%= pluralize pin.reputation_for(:votes).to_i, "Likes" %> | <%= link_to (pluralize(pin.comments.count, 'comment')), pin %></p>
 	</p>
 	    <% if current_user == pin.user %>
 	   		<%= link_to 'Edit', edit_pin_path(pin) %>

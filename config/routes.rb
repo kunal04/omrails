@@ -1,7 +1,9 @@
 Omrails::Application.routes.draw do
   get "users/show"
 
-  resources :pins
+  resources :pins do
+    resources :comments    
+  end
 
 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}

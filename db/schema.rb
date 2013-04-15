@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414022116) do
+ActiveRecord::Schema.define(:version => 20130415023650) do
+
+  create_table "comments", :force => true do |t|
+    t.integer  "pin_id"
+    t.integer  "user_id"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "pins", :force => true do |t|
     t.string   "description"
@@ -92,6 +100,7 @@ ActiveRecord::Schema.define(:version => 20130414022116) do
     t.string   "authentication_token"
     t.string   "city"
     t.string   "country"
+    t.string   "gender"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
