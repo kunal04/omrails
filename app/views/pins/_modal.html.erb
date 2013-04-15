@@ -13,6 +13,7 @@
     <%= pluralize pin.reputation_for(:votes).to_i, "Likes" %> |
       <%= link_to "Like", vote_pin_path(pin, type: "up"), method: "post" %> |
       <%= link_to "Unlike", vote_pin_path(pin, type: "down"), method: "post" %> |
+      <%= pluralize pin.reputation_for(:votes).to_i, "Likes" %> | <%= link_to (pluralize(pin.comments.count, 'comment')), pin %>
     
   </div>
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
